@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SurroundingHeader" id="U6b-Vx-4bR" customClass="SurroundingHeader">
+            <rect key="frame" x="0.0" y="0.0" width="396" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내 주변" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xiL-hF-yuX">
+                    <rect key="frame" x="16" y="11" width="72" height="30"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="25"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4V-uG-CCS">
+                    <rect key="frame" x="323" y="17" width="57" height="16"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                    <state key="normal" title="전체보기 " image="chevron-right">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jj5-XC-0aA">
+                    <rect key="frame" x="96" y="13" width="50" height="25"/>
+                    <state key="normal" image="filter"/>
+                    <connections>
+                        <action selector="filterBtn:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="Tv0-3E-hWo"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Du9-5p-zep">
+                    <rect key="frame" x="154" y="13" width="50" height="25"/>
+                    <state key="normal" image="1km"/>
+                    <connections>
+                        <action selector="distanceBtn:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="vGO-3k-7lh"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="xiL-hF-yuX" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="7HS-jx-gV5"/>
+                <constraint firstItem="xiL-hF-yuX" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="16" id="MwL-nC-uT3"/>
+                <constraint firstItem="Du9-5p-zep" firstAttribute="leading" secondItem="Jj5-XC-0aA" secondAttribute="trailing" constant="8" id="NMc-Ur-kzJ"/>
+                <constraint firstItem="Jj5-XC-0aA" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="Rlg-su-O5s"/>
+                <constraint firstItem="Z4V-uG-CCS" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="TDJ-EH-zly"/>
+                <constraint firstItem="Du9-5p-zep" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="WgO-FD-qcz"/>
+                <constraint firstItem="Jj5-XC-0aA" firstAttribute="leading" secondItem="xiL-hF-yuX" secondAttribute="trailing" constant="8" id="aFT-LD-BX8"/>
+                <constraint firstAttribute="trailing" secondItem="Z4V-uG-CCS" secondAttribute="trailing" constant="16" id="l2I-Cq-Xga"/>
+            </constraints>
+            <connections>
+                <outlet property="distanceBtnImage" destination="Du9-5p-zep" id="h6F-Lh-1oi"/>
+                <outlet property="filterBtn" destination="Jj5-XC-0aA" id="7Xd-m9-1CV"/>
+            </connections>
+            <point key="canvasLocation" x="27" y="66"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="1km" width="50" height="25"/>
+        <image name="chevron-right" width="8" height="14"/>
+        <image name="filter" width="50" height="25"/>
+    </resources>
+</document>
